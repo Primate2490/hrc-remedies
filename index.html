@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ff5a1f">
+  <title>Защита от пыток и произвольного задержания для россиян в иммиграционных тюрьмах</title>
+  <meta name="description" content="Куда обращаться и на какие нормы ссылаться, если вас пытают, высылают в страну, где грозят пытки, или произвольно задержали в иммиграционной тюрьме.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Защита от пыток и произвольного задержания для россиян в иммиграционных тюрьмах">
+  <meta property="og:description" content="Куда обращаться и на какие нормы ссылаться, если вас пытают, высылают в страну, где грозят пытки, или произвольно задержали в иммиграционной тюрьме.">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&family=Literata:ital,opsz,wght@0,7..72,400;1,7..72,400&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <div class="alert-banner" id="alert-banner" role="dialog" aria-modal="true" aria-labelledby="alert-banner-title">
+    <div class="alert-banner-inner">
+      <h3 id="alert-banner-title">Stop arbitrary detention of migrants, refugees, and asylum seekers</h3>
+      <button class="alert-banner-close" type="button" aria-label="Закрыть">×</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var banner = document.getElementById("alert-banner");
+      var closeBtn = banner.querySelector(".alert-banner-close");
+      var NAME = "un-remedies-banner";
+      var MAX_AGE = 10 * 60 * 60; // 10 часов
+
+      function getCookie(name) {
+        var re = new RegExp("(?:^|;\\s*)" + String(name).replace(/([.$?*|{}()\[\]\\/+^])/g, "\\$1") + "=([^;]*)");
+        var m = document.cookie.match(re);
+        return m ? m[1] : null;
+      }
+      function setCookie(name, value, maxAge) {
+        document.cookie = name + "=" + value + "; max-age=" + maxAge + "; path=/; SameSite=Lax";
+      }
+
+      if (getCookie(NAME)) {
+        return; // уже показывали этого посетителю за последние 10 часов
+      }
+
+      banner.style.display = "flex";
+      document.body.style.overflow = "hidden";
+
+      function hide() {
+        banner.style.display = "none";
+        document.body.style.overflow = "";
+        setCookie(NAME, "1", MAX_AGE);
+      }
+
+      closeBtn.addEventListener("click", hide);
+      banner.addEventListener("click", function (e) {
+        if (e.target === banner) hide();
+      });
+    })();
+  </script>
+
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <nav class="topbar" aria-label="Разделы страницы">
+    <div class="topbar-inner">
+      <a class="topbar-mark" href="#top" aria-label="В начало"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M5 3v20M11 3v20M17 3v20M23 3v20" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M1.5 19L25 7" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity=".55"/></svg></a>
+      <ul class="topbar-links">
+        <li><a href="#legal">Правовая основа</a></li>
+        <li><a href="#mechanisms">Механизмы</a></li>
+        <li><a href="#standards">Позиция экспертов ООН</a></li>
+        <li><a href="#norms">Стандарты</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="hero-art" aria-hidden="true"><svg viewBox="0 0 434 564" xmlns="http://www.w3.org/2000/svg"><path d="M30 540V30H390V540Z" fill="#16212a" transform="translate(14 14)"/><path d="M30 540V30H390V540Z" fill="#f6f7f3"/><g class="leaf"><polygon points="30,30 250,80 250,500 30,540" fill="#16212a"/><polygon points="69.6,98.3 210.4,123.3 210.4,214.9 69.6,202.0" fill="#f6f7f3"/><g fill="none" stroke="#16212a" stroke-width="7"><path class="bar" style="--i:0" pathLength="1" d="M104.8 104.5L104.8 205.2"/><path class="bar" style="--i:1" pathLength="1" d="M140.0 110.8L140.0 208.5"/><path class="bar" style="--i:2" pathLength="1" d="M175.2 117.1L175.2 211.7"/></g><g stroke="#f6f7f3" stroke-width="3" opacity=".3"><path d="M52.0 265.5L228.0 272.3"/><path d="M52.0 345.6L228.0 341.0"/><path d="M52.0 425.8L228.0 409.6"/></g><polygon points="188.4,288.6 228.0,289.5 228.0,315.2 188.4,315.3" fill="#ff5a1f"/><polygon points="69.6,473.5 140.0,464.2 140.0,482.8 69.6,493.3" fill="#f6f7f3" opacity=".85"/></g><path d="M30 540V30H390V540" fill="none" stroke="#16212a" stroke-width="16" stroke-linejoin="miter"/><path d="M16 546H404" stroke="#16212a" stroke-width="14"/></svg></div>
+
+      <script>
+        // Дверь открывается: закрытая створка (на весь проём) поворачивается вокруг петель.
+        // Перспектива восстановлена по итоговой геометрии рисунка, поэтому в конце кадр совпадает с SVG.
+        (function () {
+          var leaf = document.querySelector(".hero-art .leaf");
+          if (!leaf || !window.requestAnimationFrame) return;
+          if (getComputedStyle(leaf.closest(".hero-art")).display === "none") return;  // иллюстрация скрыта на узких экранах
+          if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+          var HX = 30, W = 360;                       // петли и ширина закрытой двери
+          var f1 = 420 / 510;                         // масштаб свободного края в итоговом кадре
+          var cos1 = 220 / (W * f1), sin1 = Math.sqrt(1 - cos1 * cos1);
+          var phi1 = Math.atan2(sin1, cos1);          // итоговый угол открытия
+          var D = f1 * W * sin1 / (1 - f1);           // расстояние до камеры
+          var YC = (80 - 30 * f1) / (1 - f1);         // линия горизонта
+
+          function num(s) { return s.match(/-?\d*\.?\d+/g).map(Number); }
+          function toDoor(x, y) {                     // итоговая точка -> координаты на плоскости двери
+            var dx = x - HX, s = dx * D / (D * cos1 - dx * sin1), f = D / (D + s * sin1);
+            return [s, YC + (y - YC) / f];
+          }
+          function toScreen(s, h, phi) {              // координаты двери -> экран при угле phi
+            var f = D / (D + s * Math.sin(phi));
+            return [HX + s * Math.cos(phi) * f, YC + (h - YC) * f];
+          }
+
+          var parts = [].map.call(leaf.querySelectorAll("polygon, path"), function (el) {
+            var isPoly = el.tagName.toLowerCase() === "polygon";
+            var attr = isPoly ? "points" : "d", orig = el.getAttribute(attr), n = num(orig), pts = [];
+            for (var i = 0; i < n.length; i += 2) pts.push(toDoor(n[i], n[i + 1]));
+            return { el: el, attr: attr, orig: orig, poly: isPoly, pts: pts };
+          });
+
+          function render(phi) {
+            parts.forEach(function (p) {
+              var xy = p.pts.map(function (q) { var r = toScreen(q[0], q[1], phi); return r[0].toFixed(1) + " " + r[1].toFixed(1); });
+              p.el.setAttribute(p.attr, p.poly ? xy.join(" ") : "M" + xy.join("L"));
+            });
+          }
+
+          function ease(x) { return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
+          var DELAY = 200, DUR = 1400, t0 = null;
+          render(0);
+          requestAnimationFrame(function tick(now) {
+            if (t0 === null) t0 = now;
+            var p = (now - t0 - DELAY) / DUR;
+            if (p >= 1) { parts.forEach(function (q) { q.el.setAttribute(q.attr, q.orig); }); return; }
+            if (p > 0) render(phi1 * ease(p));
+            requestAnimationFrame(tick);
+          });
+        })();
+      </script>
+
+      <h1>Механизмы защиты от пыток, жестокого обращения, произвольного задержания и неправомерной высылки для задержанных антивоенных россиян в иммиграционных тюрьмах мира</h1>
+
+      <div class="header-quotes">
+        <figure>
+          <blockquote>
+          Никто не должен подвергаться пыткам или жестоким, бесчеловечным или унижающим
+          его достоинство обращению и наказанию.
+          </blockquote>
+          <figcaption>Всеобщая декларация прав человека, статья 5</figcaption>
+        </figure>
+        <figure>
+          <blockquote>
+          Никто не может быть подвергнут произвольному аресту, задержанию или изгнанию.
+          </blockquote>
+          <figcaption>Всеобщая декларация прав человека, статья 9</figcaption>
+        </figure>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" aria-labelledby="legal-title" id="legal">
+      <h2 class="panel-title" id="legal-title">Правовая основа</h2>
+
+      <div class="legal-panel">
+        <div class="legal-grid">
+
+          <article class="legal-doc">
+            <header class="legal-doc-head">
+              <div>
+                <h3>Конвенция против пыток</h3>
+              </div>
+            </header>
+
+            <details class="legal-article">
+              <summary><span class="art-no">Ст. 1</span><span class="art-title">Определение понятия «пытка»</span></summary>
+              <div class="art-body">
+                <blockquote>
+                  …определение «пытка» означает любое действие, которым какому-либо лицу
+                  умышленно причиняется сильная боль или страдание, физическое или
+                  нравственное… когда такая боль или страдание причиняются государственным
+                  должностным лицом или иным лицом, выступающим в официальном качестве,
+                  или по их подстрекательству, или с их ведома или молчаливого согласия.
+                </blockquote>
+              </div>
+            </details>
+
+            <details class="legal-article">
+              <summary><span class="art-no">Ст. 3</span><span class="art-title">Защита от высылки</span></summary>
+              <div class="art-body">
+                <blockquote>
+                  Ни одно Государство-участник не должно высылать, возвращать
+                  («refouler») или выдавать какое-либо лицо другому государству, если
+                  существуют серьезные основания полагать, что ему может угрожать там
+                  применение пыток.
+                </blockquote>
+                <p class="legal-note">
+                  Защита от принудительного возвращения применяется ко всем людям
+                  без дискриминации и независимо от их права на получение статуса
+                  беженца (A/HRC/37/50, п. 37).
+                </p>
+              </div>
+            </details>
+          </article>
+
+          <article class="legal-doc">
+            <header class="legal-doc-head">
+              <div>
+                <h3>Конвенция о беженцах</h3>
+              </div>
+            </header>
+
+            <details class="legal-article">
+              <summary><span class="art-no">Ст. 1A(2)</span><span class="art-title">Определение понятия «беженец»</span></summary>
+              <div class="art-body">
+                <blockquote>
+                  …в силу вполне обоснованных опасений стать жертвой преследований
+                  по признаку расы, вероисповедания, гражданства, принадлежности
+                  к определенной социальной группе или политических убеждений находится
+                  вне страны своей гражданской принадлежности и не может пользоваться
+                  защитой этой страны или не желает пользоваться такой защитой
+                  вследствие таких опасений…
+                </blockquote>
+              </div>
+            </details>
+
+            <details class="legal-article">
+              <summary><span class="art-no">Ст. 33</span><span class="art-title">Защита от высылки</span></summary>
+              <div class="art-body">
+                <blockquote>
+                  Договаривающиеся Государства не будут никоим образом высылать или
+                  возвращать беженцев на границу страны, где их жизни или свободе
+                  угрожает опасность вследствие их расы, религии, гражданства,
+                  принадлежности к определенной социальной группе или политических
+                  убеждений.
+                </blockquote>
+              </div>
+            </details>
+          </article>
+
+          <article class="legal-doc legal-doc--wide">
+            <header class="legal-doc-head">
+              <div>
+                <h3>Категории произвольного задержания</h3>
+                <p>Рабочая группа ООН по произвольным задержаниям, методы работы, A/HRC/36/38, п. 8</p>
+              </div>
+            </header>
+
+            <details class="legal-article">
+              <summary><span class="art-no">Кат. I</span><span class="art-title">Отсутствие правового основания</span></summary>
+              <div class="art-body">
+                <blockquote>
+                  …когда явно невозможно сослаться на какое-либо правовое основание, оправдывающее лишение свободы (например, когда какое-либо лицо содержится в заключении после отбытия им срока своего наказания или вопреки распространяющемуся на него закону об амнистии).
+                </blockquote>
+              </div>
+            </details>
+
+            <details class="legal-article">
+              <summary><span class="art-no">Кат. II</span><span class="art-title">Осуществление основных прав и свобод</span></summary>
+              <div class="art-body">
+                <blockquote>
+                  …когда лишение свободы является результатом осуществления прав и свобод, гарантированных статьями 7, 13, 14, 18, 19, 20 и 21 Всеобщей декларации прав человека, а в отношении государств-участников Международного пакта о гражданских и политических правах — статьями 12, 18, 19, 21, 22, 25, 26 и 27 Пакта.
+                </blockquote>
+              </div>
+            </details>
+
+            <details class="legal-article">
+              <summary><span class="art-no">Кат. III</span><span class="art-title">Нарушение права на справедливое судебное разбирательство</span></summary>
+              <div class="art-body">
+                <blockquote>
+                  …когда полное или частичное несоблюдение международных норм относительно права на справедливое судебное разбирательство, закрепленных во Всеобщей декларации прав человека и применимых международно-правовых документах, принятых соответствующими государствами, является настолько серьезным, что это придает лишению свободы произвольный характер.
+                </blockquote>
+              </div>
+            </details>
+
+            <details class="legal-article">
+              <summary><span class="art-no">Кат. IV</span><span class="art-title">Длительное административное задержание мигрантов</span></summary>
+              <div class="art-body">
+                <blockquote>
+                  …когда просители убежища, иммигранты или беженцы подвергаются длительному административному задержанию без возможности пересмотра дела или получения правовой защиты в административном или судебном порядке.
+                </blockquote>
+              </div>
+            </details>
+
+            <details class="legal-article">
+              <summary><span class="art-no">Кат. V</span><span class="art-title">Дискриминация</span></summary>
+              <div class="art-body">
+                <blockquote>
+                  …когда лишение свободы является нарушением международного права в силу дискриминации по признаку рождения, национального, этнического или социального происхождения, языка, религии, экономического положения, политических или иных убеждений, пола, сексуальной ориентации, инвалидности или иного статуса, которая приводит или может привести к игнорированию принципа равенства людей.
+                </blockquote>
+              </div>
+            </details>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band" aria-labelledby="mechanisms-title" id="mechanisms">
+      <h2 id="mechanisms-title">Правовые механизмы защиты</h2>
+
+      <div class="mechanism-list">
+      <article class="mechanism-card" id="sr-torture">
+        <header class="mechanism-head">
+          <span class="mechanism-number" aria-hidden="true">1</span>
+          <div>
+            <h3>Обращение к <a href="https://www.ohchr.org/ru/special-procedures/sr-torture" target="_blank" rel="noopener noreferrer">Специальному докладчику ООН по вопросу о пытках</a></h3>
+          </div>
+        </header>
+        <ul class="points">
+          <li>
+            К основным видам деятельности докладчика, предусмотренным мандатом,
+            относятся направление государствам призывов к действиям в отношении лиц,
+            находящихся под угрозой пыток, а также сообщений о предполагаемых случаях
+            пыток.
+          </li>
+          <li>
+            В отличие от механизмов подачи жалоб в рамках договорных органов в области
+            прав человека, осуществляющих мониторинг, Специальный докладчик <strong>не требует
+            исчерпания внутренних средств правовой защиты</strong>, чтобы начать действовать.
+          </li>
+        </ul>
+        <div class="mechanism-actions">
+          <a class="mechanism-cta" href="https://spsubmission.ohchr.org/" target="_blank" rel="noopener noreferrer">Подать обращение</a>
+        </div>
+      </article>
+
+      <article class="mechanism-card" id="cat">
+        <header class="mechanism-head">
+          <span class="mechanism-number" aria-hidden="true">2</span>
+          <div>
+            <h3>Жалоба на нарушение Конвенции в <a href="https://www.ohchr.org/ru/treaty-bodies/cat/" target="_blank" rel="noopener noreferrer">Комитет ООН против пыток</a></h3>
+          </div>
+        </header>
+        <ul class="points">
+          <li>
+            Большинство жалоб подаются на нарушение статьи 3 (невысылка).
+          </li>
+          <li>
+            Квазисудебный орган. Для подачи жалобы <strong>требуется исчерпание
+            всех средств защиты на национальном уровне.</strong> Жалоба может считаться
+            приемлемой без исчерпания средств внутренней защиты, когда их нет или они неэффективны.
+          </li>
+          <li>
+            Комитет рассматривает жалобы только на те государства, которые признали его
+            компетенцию по статье 22 Конвенции.
+          </li>
+          <li>
+            Для составления жалобы необходима помощь юриста.
+          </li>
+          <li>
+            Вне зависимости от приемлемости жалобы Комитет может просить государство
+            принять срочные меры, если имеет место угроза жизни и здоровью.
+          </li>
+        </ul>
+      </article>
+      <article class="mechanism-card" id="wgad">
+        <header class="mechanism-head">
+          <span class="mechanism-number" aria-hidden="true">3</span>
+          <div>
+            <h3>Обращение в <a href="https://www.ohchr.org/ru/special-procedures/wg-arbitrary-detention" target="_blank" rel="noopener noreferrer">Рабочую группу ООН по произвольным задержаниям</a></h3>
+          </div>
+        </header>
+        <ul class="points">
+          <li>
+            Рабочая группа — это единственный недоговорный механизм, чей мандат предусматривает рассмотрение индивидуальных жалоб. Это означает, что ее действия основываются на праве подачи петиции частными лицами в любой точке мира.
+          </li>
+          <li>
+            Для обращения в Рабочую группу <strong>не требуется прохождения каких-либо национальных судебных (или квазисудебных) инстанций.</strong>
+          </li>
+          <li>
+            Наряду с другими специальными процедурами Рабочая группа разработала процедуру «срочных мер» для случаев, когда имеются достаточно обоснованные утверждения о том, что данное лицо произвольно лишено свободы и что дальнейшее его лишение свободы может создавать серьезную угрозу для его здоровья или даже жизни.
+          </li>
+        </ul>
+        <div class="mechanism-actions">
+          <a class="mechanism-cta" href="https://spsubmission.ohchr.org/" target="_blank" rel="noopener noreferrer">Подать обращение</a>
+        </div>
+      </article>
+      </div>
+
+    </section>
+
+    <section class="section" aria-labelledby="standards-title" id="standards">
+      <details class="section-collapse">
+        <summary class="section-toggle">
+          <h2 id="standards-title">Позиция экспертов ООН по иммиграционному задержанию</h2>
+        </summary>
+
+      <div class="standards">
+
+        <article class="standard-group">
+          <h3>Криминализация нерегулярной миграции</h3>
+
+          <figure class="standard-quote">
+            <blockquote>
+              Незаконный въезд в страну и пребывание в ней мигрантов не должны
+              рассматриваться как уголовное преступление, поэтому криминализация
+              нерегулярной миграции всегда выходит за пределы законных интересов
+              государств в защите своей территории и регулирования потоков
+              нерегулярной миграции.
+            </blockquote>
+            <figcaption>
+              <span class="quote-source">A/HRC/39/45</span>
+              Рабочая группа по произвольным задержаниям, пересмотренное
+              заключение № 5, п. 10
+            </figcaption>
+          </figure>
+
+          <figure class="standard-quote">
+            <blockquote>
+              …практика помещения иммигрантов под стражу должна быть постепенно
+              упразднена. Нелегальные мигранты не совершали никаких преступлений.
+              Криминализация нелегальной миграции выходит за рамки законной
+              заинтересованности государства в защите своей территории
+              и регулирования потоков нелегальной миграции.
+            </blockquote>
+            <figcaption>
+              <span class="quote-source">A/HRC/13/30</span>
+              Доклад Рабочей группы по произвольным задержаниям, 18 января 2010 года, п. 58
+            </figcaption>
+          </figure>
+
+          <figure class="standard-quote">
+            <blockquote>
+              …установление уголовной ответственности за незаконный въезд в страну
+              выходит за рамки законного стремления государства контролировать
+              и регулировать незаконную иммиграцию и приводит к неправомерным
+              задержаниям.
+            </blockquote>
+            <figcaption>
+              <span class="quote-source">A/HRC/7/4</span>
+              Доклад Рабочей группы по произвольным задержаниям, 10 января 2008 года, п. 53
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="standard-group">
+          <h3>Пределы и условия задержания</h3>
+
+          <figure class="standard-quote">
+            <blockquote>
+              По мнению Специального докладчика, задержание в рамках уголовного
+              или административного права только на основании миграционного статуса
+              выходит за рамки законных интересов государств в области обеспечения
+              защиты своей территории и регулирования незаконной миграции,
+              и его следует рассматривать как произвольное.
+            </blockquote>
+            <figcaption>
+              <span class="quote-source">A/HRC/37/50</span>
+              Доклад Специального докладчика ООН по вопросу о пытках, п. 24
+            </figcaption>
+          </figure>
+
+          <figure class="standard-quote">
+            <blockquote>
+              Отсутствие у государства-участника возможности осуществить высылку
+              лица не является основанием для бессрочного принудительного
+              содержания под стражей.
+            </blockquote>
+            <figcaption>
+              <span class="quote-source">A/HRC/37/50</span>
+              Доклад Специального докладчика ООН по вопросу о пытках, п. 21
+            </figcaption>
+          </figure>
+
+          <figure class="standard-quote">
+            <blockquote>
+              Примером правового ограничения возможности высылки является принцип
+              недопустимости принудительного возвращения. В тех случаях, когда
+              препятствие для высылки задержанных мигрантов лежит за пределами
+              сферы их ответственности, они должны быть освобождены для избежания
+              потенциально бессрочного задержания, которое являлось бы произвольным.
+            </blockquote>
+            <figcaption>
+              <span class="quote-source">A/HRC/13/30</span>
+              Доклад Рабочей группы по произвольным задержаниям, 18 января 2010 года, п. 63
+            </figcaption>
+          </figure>
+
+          <figure class="standard-quote">
+            <blockquote>
+              Как таковое <strong>задержание, осуществляемое исключительно
+              на основании миграционного статуса, может быть даже равнозначно
+              пыткам</strong>, особенно
+              в тех случаях, когда такую практику умышленно применяют или закрепляют
+              для таких целей, как сдерживание, запугивание или наказание мигрантов
+              с неурегулированным статусом или членов их семей в целях их
+              принуждения к отказу от ходатайств о предоставлении убежища
+              и дополнительной защиты, продлении пребывания, а также к выражению
+              согласия на «добровольное» возвращение, к предоставлению информации
+              или сдаче отпечатков пальцев, либо в целях вымогательства у них денег
+              и совершения действий сексуального характера в их отношении или
+              по причинам, основанным на дискриминации любого рода, включая
+              дискриминацию по признаку иммиграционного статуса.
+            </blockquote>
+            <figcaption>
+              <span class="quote-source">A/HRC/37/50</span>
+              Доклад Специального докладчика ООН по вопросу о пытках, п. 28
+            </figcaption>
+          </figure>
+
+          <figure class="standard-quote">
+            <blockquote>
+              Государствам следует воздерживаться от политики обязательного,
+              длительного или бессрочного задержания мигрантов. Мигрантов никогда
+              не должны задерживать исключительно по причине их неурегулированного
+              миграционного статуса или потому, что они не могут быть высланы.
+              Любое связанное с миграцией задержание должно применяться в качестве
+              исключительной меры.
+            </blockquote>
+            <figcaption>
+              <span class="quote-source">A/HRC/37/50</span>
+              Доклад Специального докладчика ООН по вопросу о пытках, п. 73
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="standard-group">
+          <h3>Запрет принудительного возвращения</h3>
+
+          <figure class="standard-quote">
+            <blockquote>
+              И в обычном, и в договорном праве запрет на пытки и неправомерное
+              обращение дополнительно конкретизирован с учетом принципа недопущения
+              принудительной высылки, в соответствии с которым государствам
+              запрещено «принудительно высылать» какое-либо лицо под юрисдикцию
+              другого государства или на любую другую территорию при наличии
+              серьезных оснований полагать, что ему или ей будет угрожать опасность
+              подвергнуться пыткам или неправомерному обращению. Вина
+              за неправомерное возвращение возлагается на совершающее неправомерное
+              возвращение государство, которое «знало или должно было знать», что
+              эта мера может подвергнуть соответствующее лицо
+              «<strong>предсказуемой</strong>, <strong>личной</strong>,
+              <strong>существующей</strong> и <strong>реальной</strong>» опасности
+              подвергнуться риску пыток или жестокого обращения на территории, находящейся вне контроля этого государства, со стороны лиц, также не подпадающих под его контроль — будь то должностные лица другого государства или негосударственные субъекты.
+            </blockquote>
+            <figcaption>
+              <span class="quote-source">A/HRC/37/50</span>
+              Доклад Специального докладчика ООН по вопросу о пытках, п. 36
+            </figcaption>
+          </figure>
+
+          <figure class="standard-quote">
+            <blockquote>
+              Защита от неправомерного возвращения, которая имеет своей
+              непосредственной целью предотвращение риска пыток и неправомерного
+              обращения, является абсолютной и не допускает отступлений; она
+              применяется во всех ситуациях, включая войны или чрезвычайное
+              положение, для всех людей без дискриминации и, в частности,
+              <strong>независимо от их права на получение статуса
+              беженца</strong>. Хотя защита от неправомерного возвращения по беженскому праву распространяется
+              только на лиц, имеющих право на получение статуса беженца,
+              и допускает исключения, основанные на соображениях национальной или
+              общественной безопасности, такое ограничение или исключение
+              не допускается, когда принудительная высылка создает для лица
+              реальную опасность применения к нему пыток или неправомерного обращения. Как органичный элемент императивного запрета на пытки
+              запрет на неправомерное возвращение перевешивает не только
+              национальные иммиграционные законы, но и противоречащие ему
+              международные обязательства, например договоры о выдаче.
+            </blockquote>
+            <figcaption>
+              <span class="quote-source">A/HRC/37/50</span>
+              Доклад Специального докладчика ООН по вопросу о пытках, п. 37
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+      </details>
+    </section>
+
+    <section class="section" aria-labelledby="norms-title" id="norms">
+      <details class="section-collapse">
+        <summary class="section-toggle">
+          <h2 id="norms-title">Ссылки на международные стандарты</h2>
+        </summary>
+      <ul class="norms-list">
+        <li>
+          <a href="https://www.un.org/ru/documents/decl_conv/declhr.shtml" target="_blank" rel="noopener noreferrer">
+            Всеобщая декларация прав человека
+          </a>
+        </li>
+        <li>
+          <a href="https://www.un.org/ru/documents/decl_conv/conventions/pactpol.shtml" target="_blank" rel="noopener noreferrer">
+            Международный пакт о гражданских и политических правах
+          </a>
+        </li>
+        <li>
+          <a href="https://www.un.org/ru/documents/decl_conv/conventions/torture.shtml" target="_blank" rel="noopener noreferrer">
+            Конвенция против пыток и других жестоких, бесчеловечных или унижающих достоинство видов обращения и наказания
+          </a>
+        </li>
+        <li>
+          <a href="https://www.un.org/ru/documents/decl_conv/conventions/refugees.shtml" target="_blank" rel="noopener noreferrer">
+            Конвенция о статусе беженцев
+          </a>
+        </li>
+        <li>
+          <a href="https://www.un.org/ru/documents/decl_conv/conventions/childcon.shtml" target="_blank" rel="noopener noreferrer">
+            Конвенция о правах ребенка
+          </a>
+        </li>
+        <li>
+          <a href="https://www.un.org/ru/documents/decl_conv/conventions/migrant1.shtml" target="_blank" rel="noopener noreferrer">
+            Международная конвенция о защите прав всех трудящихся-мигрантов и членов их семей
+          </a>
+        </li>
+        <li>
+          <a href="https://www.un.org/ru/documents/decl_conv/conventions/disability.shtml" target="_blank" rel="noopener noreferrer">
+            Конвенция о правах инвалидов
+          </a>
+        </li>
+        <li>
+          <a href="https://www.un.org/ru/documents/decl_conv/conventions/detent.shtml" target="_blank" rel="noopener noreferrer">
+            Свод принципов защиты всех лиц, подвергаемых задержанию или заключению в какой бы то ни было форме
+          </a>
+        </li>
+        <li>
+          <a href="https://docs.un.org/A/RES/70/175" target="_blank" rel="noopener noreferrer">
+            Минимальные стандартные правила Организации Объединенных Наций в отношении обращения с заключенными (Правила Нельсона Манделы)
+          </a>
+        </li>
+        <li>
+          <a href="https://www.un.org/ru/documents/decl_conv/conventions/juveniles_liberty.shtml" target="_blank" rel="noopener noreferrer">
+            Правила Организации Объединенных Наций, касающиеся защиты несовершеннолетних, лишенных свободы
+          </a>
+        </li>
+        <li>
+          <a href="https://docs.un.org/A/HRC/30/37" target="_blank" rel="noopener noreferrer">
+            Основные принципы и руководящие положения Организации Объединенных Наций о средствах правовой защиты и процедурах, связанных с правом любого лица, лишенного свободы, на обращение в суд
+          </a>
+        </li>
+      </ul>
+      </details>
+    </section>
+
+  </main>
+
+  <div class="tally-wall" aria-hidden="true"></div>
+
+  <a class="to-top" href="#top" aria-label="Наверх"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 11.5l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+
+  <script>
+    // Разделы-«гармошки»: открываем нужный раздел при переходе по якорной ссылке
+    (function () {
+      function openFor(id) {
+        if (!id) return;
+        var el = document.getElementById(id);
+        if (!el) return;
+        var d = el.closest("details") || el.querySelector(":scope > details");
+        if (d && !d.open) d.open = true;
+      }
+      document.addEventListener("click", function (e) {
+        var a = e.target.closest && e.target.closest('a[href^="#"]');
+        if (a) openFor(a.getAttribute("href").slice(1));
+      });
+      window.addEventListener("hashchange", function () { openFor(location.hash.slice(1)); });
+      openFor(location.hash.slice(1));
+    })();
+
+    (function () {
+      var opened = [];
+      window.addEventListener("beforeprint", function () {
+        opened = [];
+        document.querySelectorAll("details").forEach(function (d) {
+          if (!d.open) { d.open = true; opened.push(d); }
+        });
+      });
+      window.addEventListener("afterprint", function () {
+        opened.forEach(function (d) { d.open = false; });
+      });
+    })();
+
+    (function () {
+      var btn = document.querySelector(".to-top");
+      var head = document.querySelector(".masthead");
+      if (!btn) return;
+
+      function setVisible(on) { btn.classList.toggle("is-visible", on); }
+
+      if (head && "IntersectionObserver" in window) {
+        // Показываем кнопку, когда обложка полностью ушла вверх за пределы экрана
+        new IntersectionObserver(function (entries) {
+          var e = entries[0];
+          setVisible(!e.isIntersecting && e.boundingClientRect.bottom <= 0);
+        }).observe(head);
+      } else {
+        var ticking = false;
+        window.addEventListener("scroll", function () {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(function () {
+            setVisible(window.pageYOffset > window.innerHeight);
+            ticking = false;
+          });
+        }, { passive: true });
+      }
+    })();
+  </script>
+</body>
+</html>
